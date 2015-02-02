@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>318智慧旅游项目</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<script type="text/javascript" src="js/jquery.js" ></script>
+    	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=4cUdiMMFc2TiaHToiI7Qfxa9"></script>
+    	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+    	<script type="text/javascript" src="js/UserJS/Initialization.js" ></script>
+    	<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    	<link rel="stylesheet" href="css/bootstrap.min.css" />
+    	<link rel="stylesheet" href="css/MainUICSS.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1 align="left">318国道智慧旅游电子地图</h1>
+			<div class="col-sm-12">
+				<nav class="navbar navbar-inverse">
+					<ul class='nav navbar-nav'>
+						<li><a  href="#">全貌展示</a></li>
+						<li class="dropdown">
+		                   <a class="dropdown-toggle" data-toggle="dropdown" href="#">定位<b class="caret"></b></a>
+		                   <ul class="dropdown-menu">
+		                      <li><a href="#" id="">IP定位</a></li>
+		                      <li><a href="#" id="">图上选点</a></li>
+                   			</ul>
+                		</li>
+                		<li><a href="#">景点展示</a></li>
+						<li class="dropdown">
+		                   <a class="dropdown-toggle" data-toggle="dropdown" href="#">工具<b class="caret"></b></a>
+		                   <ul class="dropdown-menu">
+		                      <li><a href="#" id="">测距</a></li>
+		                      <li><a href="#" id="">天气</a></li>
+		                      <li><a href="#" id="">标记</a></li>
+		                      <li><a href="#" id="">清除</a></li>
+                   			</ul>
+                		</li>
+                		<li><a href="#" class="navbar-link">兴趣点</a></li>
+						<li>
+							<form class="navbar-form navbar-right">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="输入搜索关键词"/>
+									<button class="btn">确定</button>
+								</div>
+							</form>
+						</li>
+					</ul>
+				</nav>
+			</div>	
+			<div class="col-sm-9">
+				<div id="MainMap"></div>	
+			</div>
+			<div class="col-sm-3">
+				<div id="subPage"></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		    // 百度地图API功能
+		   var map = new BMap.Map("MainMap");
+		   map.centerAndZoom(new BMap.Point(97.401082,30.067318), 7);
+		   map.setCurrentCity("成都");
+		   map.enableScrollWheelZoom(true);
+		   map.setMapStyle({styleJson:GetStyleJson()});
+		   $().ready(function(){
+		   	$("#subPage").load("POIInfoPage.html");
+		   	
+		   });
+		</script>
+	</body>
+</html>
