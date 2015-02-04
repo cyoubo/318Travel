@@ -23,14 +23,17 @@ function Initialization()
 {
 	$().ready(function()
 	{
-		$("#subPage").load("POIInfoPage.html");
+		$("#subPage").load("WelcomePage.html");
 		//绑定事件
 		$("#index_navbar_FullSenceShow").click(navbar_fullSence_listerner);
 		$("#index_navbar_dropdown_IPLocation").click(index_navbar_dropdown_IPLocation_listerner);
 		$("#index_navbar_dropdown_distance").click(index_navbar_dropdown_distance_listerner);
 		$("#index_navbar_dropdown_DrawLocation").click(index_navbar_dropdown_DrawLocation_listerner);
+		$("#index_navbar_dropdown_clean").click(index_navbar_dropdown_clean_listerner);
+		$("#index_navbar_dropdown_SpotDisplay").click(index_navbar_dropdown_SpotDisplay);
 		//指定全局变量，表示当前位置
 		G_currentLocation=undefined;
+		G_currentLocationLayer=undefined;
 	});
 	
 }

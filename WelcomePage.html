@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<script type="text/javascript" src="js/jquery.js" ></script> 
+    	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=4cUdiMMFc2TiaHToiI7Qfxa9"></script>
+    	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+    	<script type="text/javascript" src="js/UserJS/Initialization.js" ></script>
+    	<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    	<link rel="stylesheet" href="css/bootstrap.min.css" />
+    	<link rel="stylesheet" href="css/MainUICSS.css" />
+	</head>
+	<body>
+		<div class="container col-sm-12 well">
+			<h3 class="text-center">欢迎使用</h3>
+			<h3 class="text-center">318智慧旅游</h3>
+			<h3 class="text-center">电子地图</h3>
+			<br />
+			<a href="#" class="list-group-item" id="WelcomePage_a_location">定位</a>
+			<p class="list-group-item hide" id="WelcomePage_a_location_text">您可以利用IP地址定位，或在图上选择您的位置</p>
+			<a href="#" class="list-group-item" id="WelcomePage_a_spot">景点浏览</a>
+			<p class="list-group-item hide" id="WelcomePage_a_spot_text">您可以根据需要展示，吃，住，行，娱，游等多类型兴趣点</p>
+			<a href="#" class="list-group-item">其他功能1</a>
+			<a href="#" class="list-group-item">其他功能2</a>
+		</div>
+		<script type="text/javascript">
+			$().ready(function()
+			{
+				$("#WelcomePage_a_location").click(function()
+				{
+					var $temp=$("#WelcomePage_a_location_text");
+					if($temp.is(":visible"))
+					{
+						$temp.addClass("hide");
+						$temp.hide();
+						$(this).removeClass("active");
+					}
+					else
+					{
+						$temp.removeClass("hide");
+						$temp.show();
+						$(this).addClass("active");
+					}
+				});
+				$("#WelcomePage_a_spot").click(function()
+				{
+					var $temp=$("#WelcomePage_a_spot_text");
+					if($temp.is(":visible"))
+					{
+						$temp.addClass("hide");
+						$temp.hide();
+						$(this).removeClass("active");
+					}
+					else
+					{
+						$temp.removeClass("hide");
+						$temp.show();
+						$(this).addClass("active");
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
+ 

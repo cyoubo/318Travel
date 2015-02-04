@@ -1,6 +1,7 @@
 function navbar_fullSence_listerner()
 {
-	map.panTo(new BMap.Point(97.401082,30.067318));
+	  map.centerAndZoom(new BMap.Point(97.401082,30.067318), 7);
+	  $("#subPage").load("WelcomePage.html");
 }
 function index_navbar_dropdown_IPLocation_listerner()
 {
@@ -21,7 +22,7 @@ function index_navbar_dropdown_DrawLocation_listerner()
 	function drawlocation(point1)
 	{
 		G_currentLocation=point1.point;
-		map.addOverlay(new BMap.Marker(G_currentLocation));
+		addCurrentLoactionOverLayer();
 		map.removeEventListener("click",drawlocation);
 		map.setDefaultCursor("default")
 	}
@@ -44,17 +45,21 @@ function index_navbar_dropdown_marker_listerner()
 }
 function index_navbar_dropdown_clean_listerner()
 {
-	
-	
+	map.clearOverlays();
 }
 function index_navbar_dropdown_SpotDisplay()
 {
 	
-	
+	$("#subPage").load("POIInfoPage.html");
 }
 
 function addCurrentLoactionOverLayer()
 {
-	  
+	 if(G_currentLocationLayer!=undefined)
+	 	map.removeOverlay(G_currentLocationLayer);
+	 
+	G_currentLocationLayer=new BMap.Marker(G_currentLocation);
+		map.addOverlay(G_currentLocationLayer);
+	
 }
 
