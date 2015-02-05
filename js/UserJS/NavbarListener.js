@@ -9,7 +9,7 @@ function index_navbar_dropdown_IPLocation_listerner()
 	{
 		//在result.center对象中，只含有lng与lat两个属性，即为Point对象，而非localresultpoi
 		G_currentLocation=result.center;
-		map.addOverlay(new BMap.Marker(G_currentLocation));
+		addCurrentLoactionOverLayer();
 	}
 	var localcity = new BMap.LocalCity();
 	localcity.get(iplocation);
@@ -46,6 +46,7 @@ function index_navbar_dropdown_marker_listerner()
 function index_navbar_dropdown_clean_listerner()
 {
 	map.clearOverlays();
+	RemoveAllCustomLayer();
 }
 function index_navbar_dropdown_SpotDisplay()
 {
@@ -62,4 +63,5 @@ function addCurrentLoactionOverLayer()
 		map.addOverlay(G_currentLocationLayer);
 	
 }
+
 

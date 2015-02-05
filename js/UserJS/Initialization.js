@@ -31,9 +31,13 @@ function Initialization()
 		$("#index_navbar_dropdown_DrawLocation").click(index_navbar_dropdown_DrawLocation_listerner);
 		$("#index_navbar_dropdown_clean").click(index_navbar_dropdown_clean_listerner);
 		$("#index_navbar_dropdown_SpotDisplay").click(index_navbar_dropdown_SpotDisplay);
+		$("#index_navbar_dropdown_Food").click(index_navbar_dropdown_Food);
 		//指定全局变量，表示当前位置
 		G_currentLocation=undefined;
 		G_currentLocationLayer=undefined;
+		//指定全局便令，表示麻点图层
+		G_customLayer_Food=undefined;
+		G_customLayer_Translate=undefined;
 	});
 	
 }

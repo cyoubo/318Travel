@@ -5,7 +5,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     	<meta name="viewport" content="width=device-width, initial-scale=1">
     	<script type="text/javascript" src="js/jquery.js"></script>
-    	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=4cUdiMMFc2TiaHToiI7Qfxa9"></script>
+    	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=0B971efce4f86ae3b3ce2d8bafa7846e"></script>
     	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
     	
     	<script type="text/javascript" src="http://api.map.baidu.com/library/DistanceTool/1.2/src/DistanceTool_min.js"></script>
@@ -15,6 +15,7 @@
     	<!--自定义Js函数链接 -->
     	<script type="text/javascript" src="js/UserJS/Initialization.js" ></script>
     	<script type="text/javascript" src="js/UserJS/NavbarListener.js" ></script>
+    	<script type="text/javascript" src="js/UserJS/SpotListener.js" ></script>
 	</head>
 	<body>
 		<div class="container">
@@ -30,7 +31,20 @@
 		                      <li id="index_navbar_dropdown_DrawLocation"><a href="#" id="">图上选点</a></li>
                    			</ul>
                 		</li>
-                		<li id="index_navbar_dropdown_SpotDisplay"><a href="#">景点展示</a></li>
+                		<li class="dropdown">
+                			<a class="dropdown-toggle" data-toggle="dropdown"  href="#">热点展示<b class="caret"></b></a>
+                			<ul class="dropdown-menu">
+                				<li id="index_navbar_dropdown_Food"><a>美食</a></li>
+                				<li id="index_navbar_dropdown_Translate"><a>交通</a></li>
+                				<li id="index_navbar_dropdown_Shop"><a>购物</a></li>
+                				<li id="index_navbar_dropdown_Inn"><a>住宿</a></li>
+                				<li id="index_navbar_dropdown_Scenic"><a>景点</a></li>
+                				<li id="index_navbar_dropdown_Festive"><a>节庆</a></li>
+                				<li id="index_navbar_dropdown_Entertainment"><a>娱乐</a></li>
+                				<li id="index_navbar_dropdown_Serve"><a>服务</a></li>
+                				<li id="index_navbar_dropdown_Hospital"><a>医疗</a></li>
+                			</ul>
+                		</li>
 						<li class="dropdown">
 		                   <a class="dropdown-toggle" data-toggle="dropdown" href="#">工具<b class="caret"></b></a>
 		                   <ul class="dropdown-menu">
