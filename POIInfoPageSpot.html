@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+	<!--
+    	作者：cyoubo@foxmail.com
+    	时间：2015-02-10
+    	描述：该界面为展示景点的子界面
+    -->
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,14 +13,14 @@
 		<div class="container col-sm-12" id="POIInfoDiv">
 			<table class="table table-condensed">
 				<tbody>
-					<caption class="text-center">景点详情</caption>
+					<caption class="text-center"><strong>景点详情</strong></caption>
 					<tr><td class="text-center" >经度</td><td class="text-center">纬度</td></tr>
 					<tr>
 						<td class="text-center"id="POIInfoPage_lng" ></td>
 						<td class="text-center"id="POIInfoPage_lat"></td>
 					</tr>
 					<tr>
-						<td colspan="2"class="text-center">景点名称</td>
+						<td colspan="2"class="text-center">名称</td>
 					</tr>
 					<tr>
 						<td colspan="2"class="text-center"id="POIInfoPage_title"></td>
@@ -32,8 +37,25 @@
 					<tr>
 						<td colspan="2"class="text-center"id="POIInfoPage_number"></td>
 					</tr>
+					<tr>
+						<td class="text-left">门票</td>
+						<td class="text-center">120元</td>
+					</tr>
+					<tr>
+						<td class="text-left">开放时间</td>
+						<td class="text-center">9:00-15:00</td>
+					</tr>
+					<tr>
+						<td class="text-left">淡旺季</td>
+						<td class="text-center">9~10</td>
+					</tr>
+					<tr>
+						<td colspan="2"class="text-center">简介</td>
+					</tr>
+					<tr>
+						<td colspan="2"class="text-center"id="POIInfoPage_introduction"></td>
+					</tr>
 				</tbody>
 			</table>
-		</div>
 	</body>
 </html>

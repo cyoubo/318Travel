@@ -23,7 +23,7 @@ function Initialization()
 {
 	$().ready(function()
 	{
-		$("#subPage").load("WelcomePage.html");
+		//$("#subPage").load("WelcomePage.html");
 		//绑定事件
 		$("#index_navbar_FullSenceShow").click(navbar_fullSence_listerner);
 		$("#index_navbar_dropdown_IPLocation").click(index_navbar_dropdown_IPLocation_listerner);
@@ -32,12 +32,16 @@ function Initialization()
 		$("#index_navbar_dropdown_clean").click(index_navbar_dropdown_clean_listerner);
 		$("#index_navbar_dropdown_SpotDisplay").click(index_navbar_dropdown_SpotDisplay);
 		$("#index_navbar_dropdown_Food").click(index_navbar_dropdown_Food);
+		$("#index_navbar_dropdown_Entertainment").click(index_navbar_dropdown_Entertainment_listerner);
 		//指定全局变量，表示当前位置
 		G_currentLocation=undefined;
 		G_currentLocationLayer=undefined;
 		//指定全局便令，表示麻点图层
 		G_customLayer_Food=undefined;
 		G_customLayer_Translate=undefined;
+		G_customLayer_Entertainment=undefined;
+		
+		$("#subPage").load("POIInfoPage.html");
 	});
 	
 }

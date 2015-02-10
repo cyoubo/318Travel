@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
+	<!--
+    	作者：cyoubo@foxmail.com
+    	时间：2015-02-10
+    	描述：该界面为展示住宿地的子界面
+    -->
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
 		<div class="container col-sm-12" id="POIInfoDiv">
-			<table class="table table-condensed">
+			<table class="table table-striped">
 				<tbody>
-					<caption class="text-center">景点详情</caption>
+					<caption class="text-center"><strong>景点详情</strong></caption>
 					<tr><td class="text-center" >经度</td><td class="text-center">纬度</td></tr>
 					<tr>
 						<td class="text-center"id="POIInfoPage_lng" ></td>
 						<td class="text-center"id="POIInfoPage_lat"></td>
 					</tr>
 					<tr>
-						<td colspan="2"class="text-center">景点名称</td>
+						<td colspan="2"class="text-center">名称</td>
 					</tr>
 					<tr>
 						<td colspan="2"class="text-center"id="POIInfoPage_title"></td>
@@ -32,8 +37,17 @@
 					<tr>
 						<td colspan="2"class="text-center"id="POIInfoPage_number"></td>
 					</tr>
+					<tr>
+						<td colspan="2"class="text-center">简介</td>
+					</tr>
+					<tr>
+						<td colspan="2"class="text-center"id="POIInfoPage_introduction"></td>
+					</tr>
 				</tbody>
 			</table>
+			<a href="#" class="thumbnail">
+         		<img src="img/temp1.png" alt="通用的占位符缩略图">
+      		</a>
 		</div>
 	</body>
 </html>

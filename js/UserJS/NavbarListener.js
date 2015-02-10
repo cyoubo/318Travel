@@ -39,6 +39,7 @@ function index_navbar_dropdown_weather_listerner()
 	
 	
 }
+
 function index_navbar_dropdown_marker_listerner()
 {
 	
