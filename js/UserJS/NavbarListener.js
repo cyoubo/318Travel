@@ -55,6 +55,17 @@ function index_navbar_dropdown_SpotDisplay()
 	$("#subPage").load("POIInfoPage.html");
 }
 
+function index_navbar_button()
+{
+	var myKeys = ["加油站"];
+	var local = new BMap.LocalSearch(map, {
+		renderOptions:{map: map, panel:"subPage"},
+		pageCapacity:3
+	});
+	local.searchInBounds(myKeys, map.getBounds());
+	
+}
+
 function addCurrentLoactionOverLayer()
 {
 	 if(G_currentLocationLayer!=undefined)

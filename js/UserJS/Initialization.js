@@ -33,6 +33,8 @@ function Initialization()
 		$("#index_navbar_dropdown_SpotDisplay").click(index_navbar_dropdown_SpotDisplay);
 		$("#index_navbar_dropdown_Food").click(index_navbar_dropdown_Food);
 		$("#index_navbar_dropdown_Entertainment").click(index_navbar_dropdown_Entertainment_listerner);
+		$("#index_navbar_dropdown_Spot").click(index_navbar_dropdown_Spot_listerner);
+		$("button").click(index_navbar_button);
 		//指定全局变量，表示当前位置
 		G_currentLocation=undefined;
 		G_currentLocationLayer=undefined;
@@ -40,8 +42,8 @@ function Initialization()
 		G_customLayer_Food=undefined;
 		G_customLayer_Translate=undefined;
 		G_customLayer_Entertainment=undefined;
+		G_customLayer_Spot=undefined;
 		
-		$("#subPage").load("POIInfoPage.html");
 	});
 	
 }

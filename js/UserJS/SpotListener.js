@@ -35,6 +35,25 @@ function index_navbar_dropdown_Entertainment_listerner()
 	
 }
 
+function index_navbar_dropdown_Spot_listerner()
+{
+	RemoveAllCustomLayer();
+	G_customLayer_Spot=new BMap.CustomLayer
+	({
+			geotableId: 94363,
+			q: '', //检索关键字
+			tags: '', //空格分隔的多字符串
+			filter: '' //过滤条件
+	});
+	map.addTileLayer(G_customLayer_Spot);
+	G_customLayer_Spot.addEventListener('hotspotclick',HotSpotCallBack_Spot);
+	$().ready(function() 
+	{
+		$("#subPage").load("POIInfoPageSpot.html");
+	});
+	
+}
+
 function HotSpotCallBack(result)
 {
 	var StdInfo=result.customPoi;
@@ -49,6 +68,25 @@ function HotSpotCallBack(result)
 	});
 }
 
+function HotSpotCallBack_Spot(result)
+{
+	var StdInfo=result.customPoi;
+	var UserInfo=result.content;
+	$().ready(function()
+	{
+		$("#POIInfoPageSpot_address").text(StdInfo.address);
+		$("#POIInfoPageSpot_title").text(StdInfo.title);
+		$("#POIInfoPageSpot_lng").text(""+StdInfo.point.lng);
+		$("#POIInfoPageSpot_lat").text(""+StdInfo.point.lat);
+		$("#POIInfoPageSpot_number").text(UserInfo.tel);
+		$("#POIInfoPageSpot_opentime").text(UserInfo.OpenTime);
+		$("#POIInfoPageSpot_ticket").text(UserInfo.Ticket);
+		$("#POIInfoPageSpot_season").text(UserInfo.Seacon);
+		$("#POIInfoPageSpot_Image").attr("src","img/"+UserInfo.PictureThunbnail);
+		$("#POIInfoPageSpot_Image_link").attr("href",UserInfo.Picture);
+	});
+}
+
 function RemoveAllCustomLayer()
 {
 	if (G_customLayer_Food!=undefined) 
@@ -60,5 +98,10 @@ function RemoveAllCustomLayer()
 	{
 		map.removeTileLayer(G_customLayer_Entertainment);
 		G_customLayer_Entertainment=undefined;
+	}
+	if (G_customLayer_Spot!=undefined)
+	{
+		map.removeTileLayer(G_customLayer_Spot);
+		G_customLayer_Spot=undefined;
 	}
 }
