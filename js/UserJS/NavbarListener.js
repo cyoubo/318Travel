@@ -1,7 +1,7 @@
 function navbar_fullSence_listerner()
 {
 	  map.centerAndZoom(new BMap.Point(97.401082,30.067318), 7);
-	  $("#subPage").load("WelcomePage.html");
+	  //$("#subPage").load("WelcomePage.html");
 }
 function index_navbar_dropdown_IPLocation_listerner()
 {
@@ -59,10 +59,12 @@ function index_navbar_button()
 {
 	var myKeys = ["加油站"];
 	var local = new BMap.LocalSearch(map, {
-		renderOptions:{map: map, panel:"subPage"},
+		renderOptions:{map: map, panel:"subPage",selectFirstResult:false},
 		pageCapacity:3
 	});
-	local.searchInBounds(myKeys, map.getBounds());
+	//local.searchInBounds(myKeys, map.getBounds());
+	
+	local.search("山", {customData: {geotableId: 94363}});
 	
 }
 
