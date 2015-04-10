@@ -23,7 +23,7 @@ function Initialization()
 {
 	$().ready(function()
 	{
-		//$("#subPage").load("WelcomePage.html");
+		$("#subPage").load("WelcomePage.html");
 		//绑定事件
 		$("#index_navbar_FullSenceShow").click(navbar_fullSence_listerner);
 		$("#index_navbar_dropdown_IPLocation").click(index_navbar_dropdown_IPLocation_listerner);
@@ -34,6 +34,9 @@ function Initialization()
 		$("#index_navbar_dropdown_Food").click(index_navbar_dropdown_Food);
 		$("#index_navbar_dropdown_Entertainment").click(index_navbar_dropdown_Entertainment_listerner);
 		$("#index_navbar_dropdown_Spot").click(index_navbar_dropdown_Spot_listerner);
+		$("#index_navbar_dropdown_Serve").click(index_navbar_dropdown_Serve_listerner);
+		$("#index_navbar_dropdown_Translate").click(index_navbar_dropdown_Translate_listerner);
+		$("#index_navbar_dropdown_Shop").click(index_navbar_dropdown_Shop_listerner);
 		$("button").click(index_navbar_button);
 		//指定全局变量，表示当前位置
 		G_currentLocation=undefined;
@@ -43,6 +46,8 @@ function Initialization()
 		G_customLayer_Translate=undefined;
 		G_customLayer_Entertainment=undefined;
 		G_customLayer_Spot=undefined;
+		G_customLayer_Serve=undefined;
+		G_customLayer_Shop=undefined;
 		
 	});
 	

@@ -4,7 +4,7 @@ function index_navbar_dropdown_Food()
 	G_customLayer_Food=new BMap.CustomLayer
 	({
 			geotableId: 88997,
-			q: '', //检索关键字
+			q: 'Food', //检索关键字
 			tags: '', //空格分隔的多字符串
 			filter: '' //过滤条件
 	});
@@ -21,8 +21,8 @@ function index_navbar_dropdown_Entertainment_listerner()
 	RemoveAllCustomLayer();
 	G_customLayer_Entertainment=new BMap.CustomLayer
 	({
-			geotableId: 94262,
-			q: '', //检索关键字
+			geotableId: 88997,
+			q: 'Entertainment', //检索关键字
 			tags: '', //空格分隔的多字符串
 			filter: '' //过滤条件
 	});
@@ -31,10 +31,64 @@ function index_navbar_dropdown_Entertainment_listerner()
 	$().ready(function() 
 	{
 		$("#subPage").load("POIInfoPage.html");
-	});
-	
+	});	
 }
 
+function index_navbar_dropdown_Serve_listerner()
+{
+	RemoveAllCustomLayer();
+	G_customLayer_Serve=new BMap.CustomLayer
+	({
+			geotableId: 88997,
+			q: 'Serve', //检索关键字
+			tags: '', //空格分隔的多字符串
+			filter: '' //过滤条件
+	});
+	map.addTileLayer(G_customLayer_Serve);
+	G_customLayer_Serve.addEventListener('hotspotclick',HotSpotCallBack);
+	$().ready(function() 
+	{
+		$("#subPage").load("POIInfoPage.html");
+	});	
+}
+
+function index_navbar_dropdown_Translate_listerner()
+{
+	RemoveAllCustomLayer();
+	G_customLayer_Translate=new BMap.CustomLayer
+	({
+			geotableId: 88997,
+			q: 'Translate', //检索关键字
+			tags: '', //空格分隔的多字符串
+			filter: '' //过滤条件
+	});
+	map.addTileLayer(G_customLayer_Translate);
+	G_customLayer_Translate.addEventListener('hotspotclick',HotSpotCallBack);
+	$().ready(function() 
+	{
+		$("#subPage").load("POIInfoPage.html");
+	});	
+}
+
+function index_navbar_dropdown_Shop_listerner()
+{
+	RemoveAllCustomLayer();
+	G_customLayer_Shop=new BMap.CustomLayer
+	({
+			geotableId: 88997,
+			q: 'Shop', //检索关键字
+			tags: '', //空格分隔的多字符串
+			filter: '' //过滤条件
+	});
+	map.addTileLayer(G_customLayer_Shop);
+	G_customLayer_Shop.addEventListener('hotspotclick',HotSpotCallBack);
+	$().ready(function() 
+	{
+		$("#subPage").load("POIInfoPage.html");
+	});	
+	
+	
+}
 function index_navbar_dropdown_Spot_listerner()
 {
 	RemoveAllCustomLayer();
@@ -82,7 +136,8 @@ function HotSpotCallBack_Spot(result)
 		$("#POIInfoPageSpot_opentime").text(UserInfo.OpenTime);
 		$("#POIInfoPageSpot_ticket").text(UserInfo.Ticket);
 		$("#POIInfoPageSpot_season").text(UserInfo.Seacon);
-		$("#POIInfoPageSpot_Image").attr("src","img/"+UserInfo.PictureThunbnail);
+		console.log(UserInfo.PictureThunbnail);//修改图片后缀为png
+		$("#POIInfoPageSpot_Image").attr("src","img/"+UserInfo.PictureThunbnail+".jpg");
 		$("#POIInfoPageSpot_Image_link").attr("href",UserInfo.Picture);
 	});
 }
